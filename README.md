@@ -6,10 +6,12 @@ It also modifies the log format to ensure that datadog can properly read the mes
 
 It allows for the basic `service`, `hostname` and `source` datadog tags to be provided as well as any custom global tags you want to add via a `map[string]string`.
 
+Has been forked to add extra Datadog hosts.
+
 # Installing the module
 
 ```
-> go get github.com/GlobalFreightSolutions/logrus-datadog-hook
+> go get github.com/CliprTX/logrus-datadog-hook
 ```
 
 # Using the Module
@@ -20,7 +22,7 @@ package main
 import (
   "time"
 
-  datadog "github.com/GlobalFreightSolutions/logrus-datadog-hook"
+  datadog "github.com/CliprTX/logrus-datadog-hook"
   "github.com/sirupsen/logrus"
 )
 
@@ -36,7 +38,7 @@ func main() {
 
   logger := logrus.New()
   logger.AddHook(hook)
-  
+
   // This ensures that the logger exits gracefully and all buffered logs are sent before closing down
 	logrus.DeferExitHandler(hook.Close)
 
