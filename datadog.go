@@ -26,6 +26,8 @@ const (
 	maxLogCount = 1000
 
 	basePath                   = "/v1/input"
+	DatadogHostUS3    endpoint = "https://http-intake.logs.us3.datadoghq.com"
+	DatadogHostUS5    endpoint = "https://http-intake.logs.us5.datadoghq.com"
 	DatadogHostUS     endpoint = "https://http-intake.logs.datadoghq.com"
 	DatadogHostEU     endpoint = "https://http-intake.logs.datadoghq.eu"
 	DatadogHostUSGOV  endpoint = "https://http-intake.logs.ddog-gov.com"
